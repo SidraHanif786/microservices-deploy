@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 
+spec:
+  selector:
+    matchLabels:
+      app: xxx
+  template:
+    metadata:
+      labels:
+        app: xxx
+    spec:
+      containers:
+      - name: xxx
+        image:
+        ports:
+        - containerPort: xxx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: 
+spec:
+  type: ClusterIP
+  selector:
+    app:
+  ports:
+  - protocol: TCP
+    ports:
+    targetPort:
+
+
